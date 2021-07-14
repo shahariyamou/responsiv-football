@@ -17,6 +17,7 @@ header{
     align-items: center;
     flex-flow: column;
     justify-content: center;
+    margin-bottom: 70px;
 }
 .conmebol{
     width: 1200px;
@@ -70,6 +71,14 @@ main{
     flex-flow: column;
 }
 
+/* style teams */
+.teams{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 27px;
+    grid-row-gap: 30px;
+}
+
 .team{
     width: 330px;
     height: 510px;
@@ -86,4 +95,46 @@ main{
     width: 100%;
     border-radius: 5px;
 
+}
+
+/* footer styles */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* copyrigt , social media styles */
+
+.copyright{
+    height: 213px;
+    width: 484px;
+    margin: 0 0 60px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 100%;
+    height: 110px;
+}
+.social-media{
+    height: 32px;
+    width: 170px;
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: repeat(4,1fr);
+}
+.social-media img{
+    width: 32px;
+    height: 32px;
+}
+.info{
+    width: 320px;
+    height: 31px;
+}
+.info h2{
+    margin: 0;
+    font-weight: 500;
 }
