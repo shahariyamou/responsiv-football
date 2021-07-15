@@ -8,9 +8,16 @@ body{
     margin: 0;
 }
 
+.container{
+    width: 1130px;
+    margin-bottom: 126px;
+    background-color: white;
+}
+
 /* header style */
 header{
     display: flex;
+   
     height: 600px;
     color: white;
     background-color:#2D25A0;
@@ -30,6 +37,7 @@ header{
 .title-head h1{
     font-size: 50px;
     font-weight: 700;
+    margin-left: 50px;
 }
 .button{
     display: flex;
@@ -39,6 +47,7 @@ header{
     justify-content: center;
     align-items: center;
     transition: transform 2s;
+    margin-left: 50px;
 }
 .button:hover{
     background-color: rgb(204, 73, 12);
@@ -57,9 +66,9 @@ header{
     justify-content: center;
 }
 .banner img{
-    width: 450px;
+    width: 400px;
     height: 420px;
-    margin-left: 150px;
+    margin-left: 50px;
 }
 
 /*------style main----- */
@@ -74,9 +83,11 @@ main{
 /* style teams */
 .teams{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 27px;
     grid-row-gap: 30px;
+    
+    
 }
 
 .team{
@@ -86,15 +97,38 @@ main{
     flex-flow: column;
     padding: 10px;
     border-radius: 5px;
-    box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(0,0,0,0),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team img{
     width: 100%;
     border-radius: 5px;
 
+}
+
+/* login */
+
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-form input,
+button {
+    font-size: 1.3em;
+    margin-top: 15px;
+    border: 1px solid lightsteelblue;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+.login-form button{
+    background-color:orangered;
+    color: whitesmoke;
+    font-weight: 700;
+    border: 0;
+    padding: 5px;
 }
 
 /* footer styles */
@@ -117,7 +151,7 @@ footer{
 }
 .logo img{
     width: 100%;
-    height: 110px;
+    height: 100px;
 }
 .social-media{
     height: 32px;
@@ -137,4 +171,64 @@ footer{
 .info h2{
     margin: 0;
     font-weight: 500;
+    font-size: 18px;
+}
+
+/*media queries*/
+
+@media (max-width:688px) {
+    .container{
+        width: 100%;
+}
+header{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.conmebol{
+    width: 100%;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+}
+
+.title{
+    padding-left:20px;
+    margin-bottom: 50px;
+}
+.title-head{
+    width: 100%;
+}
+
+.banner{
+    width: 100%;
+    margin-bottom: 62px;
+    align-items: center;
+    justify-content: center;
+}
+.banner img{
+    margin: 0;
+}
+/* teams */
+.teams{
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;
+    
+}
+ /* footer */
+ footer{
+    flex-flow: column;
+    margin-bottom: 150px;
+}
+.copyrights{
+    width: 90%;
+    height: 144px;
+}
+.logo img{
+    width: 100%;
+    height: 71px;
+}
 }
